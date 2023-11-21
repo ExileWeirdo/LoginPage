@@ -29,6 +29,7 @@ app.use(
 );
 
 app.get('/', isAuthenticated,  (req, res) => {
+  console.log("Rendering index");
   res.render("index");
 });
 
@@ -233,6 +234,7 @@ function isAuthenticated(req, res, next) {
   if (req.session.authenticated) {
     return next();
   } else {
+    console.log("Redirecting to /login");
     res.redirect("/login");
   }
 }

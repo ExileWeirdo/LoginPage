@@ -8,6 +8,9 @@
     "start": "node server.js",
     "devStart": "nodeMon sever.js"
   },
+  "engines": {
+    "node": ">=18.18.0 <19.0.0"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
